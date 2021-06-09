@@ -10,10 +10,10 @@ export class AppComponent {
   name = 'Angular ' + VERSION.major;
 
   ngOnInit() {
-    getLinkPreview('http://www.youtube.com/watch?v=MejbOFk7H6c', {
-      headers: {
-        'Access-Control-Allow-Origin': '*'
-      }
-    }).then(data => console.debug(data));
+    console.debug('sds');
+
+    getLinkPreview('https://www.youtube.com/watch?v=MejbOFk7H6c')
+      .then(data => console.debug(data))
+      .catch(data => console.debug(data));
   }
 }
